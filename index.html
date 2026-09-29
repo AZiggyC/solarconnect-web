@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar Connect | Der passende Solarbetrieb für Ihr Haus</title>
+<meta name="description" content="Sie planen eine Solaranlage? Beantworten Sie vier kurze Fragen. Wir prüfen, welcher Fachbetrieb aus Ihrer Region am besten zu Ihrem Vorhaben passt, und stellen den Kontakt her. Kostenlos und unverbindlich.">
+<meta name="theme-color" content="#0F1E2E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_CH">
+<meta property="og:site_name" content="Solar Connect">
+<meta property="og:title" content="Solar Connect | Der passende Solarbetrieb für Ihr Haus">
+<meta property="og:description" content="Vier kurze Fragen, ein passender Fachbetrieb aus Ihrer Region. Kostenlos und unverbindlich.">
+
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Solar Connect, zur Startseite">
+      <img src="assets/icon.svg" alt="" width="28" height="28">
+      <span><span class="b-solar">Solar</span> <span class="b-connect">Connect</span></span>
+    </a>
+
+    <nav class="site-nav" id="nav" aria-label="Hauptnavigation">
+      <a href="#ablauf">So funktioniert es</a>
+      <a href="#pruefen">Was wir prüfen</a>
+      <a href="#fragen">Häufige Fragen</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-primary btn-sm" href="#anfrage">Anfrage starten</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menü</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" style="margin-bottom:22px">Photovoltaik · Speicher · Wallbox</p>
+      <h1>Die passende Solarfirma.<br><span class="accent">Für Ihr Dach, in Ihrer Region.</span></h1>
+      <p class="lead">Sie sagen uns in zwei Minuten, was Sie vorhaben. Wir prüfen, welcher Fachbetrieb aus Ihrer Region am besten zu Ihrem Haus und Ihrem Zeitplan passt, und stellen den Kontakt her.</p>
+
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="#anfrage">Anfrage starten</a>
+        <a class="btn btn-outline btn-lg" href="#ablauf">So funktioniert es</a>
+      </div>
+
+      <div class="hero-note">
+        <span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Für Sie kostenlos
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Unverbindlich
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ein Betrieb statt zehn Anrufe
+        </span>
+      </div>
+    </div>
+
+    <!-- Anfrage. Gleiche Fragen wie das SolarHai-Referenzformular 998763076243603,
+         damit Website-Anfragen und Meta-Formular-Leads dieselben Felder tragen. -->
+    <aside class="panel" id="anfrage">
+      <form id="quiz" novalidate
+            data-endpoint="[[PLATZHALTER: Webhook-URL fuer Anfragen eintragen, z.B. Zapier Catch Hook]]">
+
+        <div class="q-head">
+          <span class="q-count" id="qCount">Frage 1 von 4</span>
+          <button type="button" class="q-back" id="qBack" hidden>Zurück</button>
+        </div>
+        <div class="q-bar" aria-hidden="true"><span id="qBar"></span></div>
+
+        <!-- Schritt 1 -->
+        <fieldset class="q-step active" data-step="1" style="border:0;margin:0;padding:0">
+          <legend class="hp">Frage 1</legend>
+          <h2>Sind Sie Eigentümer der Immobilie?</h2>
+          <p class="q-sub">Über eine Solaranlage entscheidet, wem das Dach gehört.</p>
+          <div class="options two">
+            <label class="option"><input type="radio" name="eigentuemer" value="Ja" data-auto><span class="tick"></span>Ja</label>
+            <label class="option"><input type="radio" name="eigentuemer" value="Nein" data-auto><span class="tick"></span>Nein</label>
+          </div>
+        </fieldset>
+
+        <!-- Nicht Eigentümer -->
+        <div class="q-step" data-step="nein">
+          <h2>Dann sind wir leider nicht die Richtigen.</h2>
+          <p class="q-sub" style="margin-bottom:0">Unsere Partnerbetriebe planen Anlagen mit den Eigentümerinnen und Eigentümern. Wenn Sie zur Miete wohnen und sich eine Solaranlage wünschen, geben Sie diese Seite gern an Ihre Vermieterschaft weiter.</p>
+        </div>
+
+        <!-- Schritt 2 -->
+        <fieldset class="q-step" data-step="2" style="border:0;margin:0;padding:0">
+          <legend class="hp">Frage 2</legend>
+          <h2>Welche Stromverbraucher nutzen Sie heute oder planen Sie?</h2>
+          <p class="q-sub">Mehrfachauswahl möglich. Das bestimmt, wie gross die Anlage sein sollte.</p>
+          <div class="options two">
+            <label class="option"><input type="checkbox" name="verbraucher" value="Elektroauto"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Elektroauto</label>
+            <label class="option"><input type="checkbox" name="verbraucher" value="Wärmepumpe"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wärmepumpe</label>
+            <label class="option"><input type="checkbox" name="verbraucher" value="Pool"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pool</label>
+            <label class="option"><input type="checkbox" name="verbraucher" value="Klimaanlage"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Klimaanlage</label>
+            <label class="option"><input type="checkbox" name="verbraucher" value="Batteriespeicher"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Batteriespeicher</label>
+            <label class="option"><input type="checkbox" name="verbraucher" value="Andere"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Andere oder keine</label>
+          </div>
+          <div class="q-actions">
+            <button type="button" class="btn btn-primary btn-lg" data-next>Weiter</button>
+          </div>
+        </fieldset>
+
+        <!-- Schritt 3 -->
+        <fieldset class="q-step" data-step="3" style="border:0;margin:0;padding:0">
+          <legend class="hp">Frage 3</legend>
+          <h2>Wann möchten Sie die Solaranlage umsetzen?</h2>
+          <p class="q-sub">So finden wir einen Betrieb, der in Ihrem Zeitraum auch Kapazität hat.</p>
+          <div class="options">
+            <label class="option"><input type="radio" name="zeitpunkt" value="So schnell wie möglich" data-auto><span class="tick"></span>So schnell wie möglich</label>
+            <label class="option"><input type="radio" name="zeitpunkt" value="In den nächsten 3 bis 6 Monaten" data-auto><span class="tick"></span>In den nächsten 3 bis 6 Monaten</label>
+            <label class="option"><input type="radio" name="zeitpunkt" value="Später" data-auto><span class="tick"></span>Später</label>
+          </div>
+        </fieldset>
+
+        <!-- Schritt 4 -->
+        <fieldset class="q-step" data-step="4" style="border:0;margin:0;padding:0">
+          <legend class="hp">Frage 4</legend>
+          <h2>Fast geschafft. Wie erreichen wir Sie?</h2>
+          <p class="q-sub">Wir brauchen Ihre Postleitzahl, um den passenden Betrieb in Ihrer Nähe zu finden.</p>
+
+          <div class="fields">
+            <div class="field">
+              <label for="name">Vor- und Nachname</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="fields-2">
+              <div class="field">
+                <label for="plz">Postleitzahl</label>
+                <input id="plz" name="plz" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{4}" maxlength="4" required>
+              </div>
+              <div class="field">
+                <label for="telefon">Telefon</label>
+                <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="einwilligung" value="ja" required>
+              <span>Ich bin einverstanden, dass Solar Connect meine Angaben prüft und an einen passenden Fachbetrieb aus meiner Region weitergibt, der mich zu meinem Vorhaben kontaktiert. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
+            </label>
+
+            <div class="hp" aria-hidden="true">
+              <label for="firma">Firma</label>
+              <input id="firma" name="firma" type="text" tabindex="-1" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="q-actions">
+            <button type="submit" class="btn btn-primary btn-lg" id="qSubmit">Anfrage absenden</button>
+            <p class="q-error" id="qError" role="alert"></p>
+            <p class="q-foot">Kostenlos und unverbindlich. Sie gehen keine Verpflichtung ein.</p>
+          </div>
+        </fieldset>
+
+        <!-- Danke -->
+        <div class="q-step q-done" data-step="danke">
+          <div class="done-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2>Danke, Ihre Anfrage ist bei uns.</h2>
+          <p>Wir prüfen jetzt, welcher Fachbetrieb aus Ihrer Region zu Ihrem Vorhaben passt. Der Betrieb meldet sich danach direkt bei Ihnen, per Telefon oder E-Mail.</p>
+          <p>Bis dahin müssen Sie nichts weiter tun.</p>
+        </div>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<div class="trust">
+  <div class="wrap trust-inner">
+    <div class="trust-item">
+      <h4>Für Sie kostenlos</h4>
+      <p>Unsere Arbeit bezahlen die Fachbetriebe. Für Sie entstehen keine Kosten.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Ein passender Betrieb</h4>
+      <p>Ihre Anfrage geht nicht an eine Liste, sondern an den Betrieb, der zu Ihrem Projekt passt.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Aus Ihrer Region</h4>
+      <p>Kurze Wege für Besichtigung, Montage und Service in den Jahren danach.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Unverbindlich</h4>
+      <p>Sie entscheiden nach Beratung und Offerte, ob Sie den Auftrag vergeben.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HALTUNG ============ -->
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" style="margin-bottom:20px">Unsere Haltung</p>
+      <h2>Wir sind kein Offertenportal.</h2>
+      <p class="lead" style="margin-top:20px">
+        Auf vielen Vergleichsportalen geht eine Anfrage gleichzeitig an mehrere Firmen. Danach klingelt das Telefon tagelang, und am Schluss liegen fünf Offerten auf dem Tisch, die sich kaum vergleichen lassen.
+      </p>
+      <p class="lead" style="margin-top:16px">
+        Wir machen es umgekehrt. Sie sagen uns einmal, was Sie vorhaben. Danach ist es unsere Aufgabe, den einen Betrieb zu finden, der für Ihr Haus, Ihre Region und Ihren Zeitplan am besten passt.
+      </p>
+    </div>
+
+    <div>
+      <div class="quote">
+        <blockquote>Nicht die meisten Offerten helfen Ihnen weiter, sondern die richtige Firma.</blockquote>
+        <cite>Der Grundsatz hinter Solar Connect</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABLAUF ============ -->
+<section class="sec-ink" id="ablauf">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">So funktioniert es</p>
+      <h2>Vier Schritte bis zur passenden Solarfirma.</h2>
+      <p class="lead">Kein Konto, keine Offertenflut, keine Verpflichtung. Der ganze Weg von der ersten Frage bis zur Beratung bei Ihnen zu Hause.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <p class="step-num">01</p>
+        <h3>Sie stellen Ihre Anfrage</h3>
+        <p>Vier kurze Fragen zu Ihrem Haus, Ihrem Stromverbrauch und Ihrem Zeitplan. Alles am Handy möglich.</p>
+        <p class="step-time">Rund 2 Minuten</p>
+      </div>
+
+      <div class="step">
+        <p class="step-num">02</p>
+        <h3>Wir prüfen die Passung</h3>
+        <p>Region, Grösse des Vorhabens, Speicher oder Wallbox, Zeitraum. Wir schauen, welcher Betrieb dafür der richtige ist.</p>
+        <p class="step-time">Unsere Aufgabe</p>
+      </div>
+
+      <div class="step">
+        <p class="step-num">03</p>
+        <h3>Der Betrieb meldet sich</h3>
+        <p>Der ausgewählte Fachbetrieb nimmt direkt Kontakt mit Ihnen auf und vereinbart einen Termin für die Beratung.</p>
+        <p class="step-time">Ein Ansprechpartner</p>
+      </div>
+
+      <div class="step">
+        <p class="step-num">04</p>
+        <h3>Beratung und Offerte</h3>
+        <p>Der Betrieb schaut sich Ihr Dach an und erstellt eine Offerte. Ob Sie den Auftrag vergeben, entscheiden allein Sie.</p>
+        <p class="step-time">Ohne Verpflichtung</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WAS WIR PRUEFEN ============ -->
+<section id="pruefen">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Was wir prüfen</p>
+      <h2>Worauf es bei der Wahl des Betriebs ankommt.</h2>
+      <p class="lead">Nicht jede Solarfirma passt zu jedem Projekt. Diese sechs Punkte schauen wir an, bevor wir Ihnen einen Betrieb vermitteln.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 18s6.5-4.35 6.5-9.4A6.5 6.5 0 003.5 8.6C3.5 13.65 10 18 10 18z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="8.5" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
+        </span>
+        <h3>Ihre Region</h3>
+        <p>Der Betrieb soll in Ihrer Nähe arbeiten. Das zählt nicht nur bei der Montage, sondern auch beim Service in den Jahren danach.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.5 9.5L10 3l7.5 6.5V17a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5V9.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7.5 17.5v-5h5v5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Ihr Haus</h3>
+        <p>Einfamilienhaus, Mehrfamilienhaus oder Gewerbe. Grösse und Art des Gebäudes entscheiden, welcher Betrieb die richtige Erfahrung mitbringt.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M11 2L4 11.5h5.5L9 18l7-9.5h-5.5L11 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Ihr Stromverbrauch</h3>
+        <p>Elektroauto, Wärmepumpe oder Pool verändern, wie gross die Anlage sein sollte und ob sich ein Speicher lohnt.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="12.5" height="8" rx="1.8" stroke="currentColor" stroke-width="1.8"/><path d="M17.5 8.5v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 10h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Speicher und Wallbox</h3>
+        <p>Wenn Sie mehr als Module aufs Dach wollen, braucht es einen Betrieb, der Speicher, Ladestation und Steuerung aus einer Hand plant.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.8"/><path d="M10 5.75V10l2.75 2.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Ihr Zeitplan</h3>
+        <p>Wer bald bauen will, braucht einen Betrieb mit freier Kapazität. Wer erst plant, braucht eine gute Beratung ohne Druck.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.5l6.5 2.75v4.4c0 4.05-2.75 6.9-6.5 7.85-3.75-.95-6.5-3.8-6.5-7.85v-4.4L10 2.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7.5 10l1.75 1.75L12.75 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Förderung und Anmeldung</h3>
+        <p>Für Solaranlagen gibt es Beiträge von Bund, Kanton und Gemeinde. Ein guter Betrieb sagt Ihnen, was für Ihr Projekt gilt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec-surface" id="fragen">
+  <div class="wrap-narrow">
+    <div class="sec-head">
+      <p class="eyebrow">Häufige Fragen</p>
+      <h2>Das werden wir am häufigsten gefragt.</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>Kostet mich die Anfrage etwas?</summary>
+        <div class="answer">
+          <p>Nein. Für Sie ist Solar Connect kostenlos. Unsere Arbeit bezahlen die Fachbetriebe, mit denen wir zusammenarbeiten. Die Offerte für Ihre Anlage erhalten Sie direkt vom Betrieb, und dort sehen Sie auch den Preis.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>An wie viele Firmen geht meine Anfrage?</summary>
+        <div class="answer">
+          <p>An einen Betrieb, und zwar an den, der nach unserer Prüfung am besten zu Ihrem Vorhaben passt. Sie werden nicht von mehreren Firmen gleichzeitig angerufen.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Muss ich Eigentümer sein?</summary>
+        <div class="answer">
+          <p>Ja. Über eine Solaranlage entscheidet, wem das Gebäude gehört. Wenn Sie zur Miete wohnen und sich eine Anlage wünschen, sprechen Sie am besten mit Ihrer Vermieterschaft und geben ihr diese Seite weiter.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Bin ich zu etwas verpflichtet?</summary>
+        <div class="answer">
+          <p>Nein. Die Anfrage, die Beratung und die Offerte sind unverbindlich. Ob und mit wem Sie Ihre Anlage bauen, entscheiden allein Sie.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Wie geht es nach meiner Anfrage weiter?</summary>
+        <div class="answer">
+          <p>Wir prüfen Ihre Angaben und wählen den passenden Fachbetrieb aus Ihrer Region. Dieser meldet sich direkt bei Ihnen, per Telefon oder E-Mail, und vereinbart einen Termin für die Beratung. In der Regel schaut sich der Betrieb Ihr Dach vor Ort an, bevor er eine Offerte erstellt.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Gibt es Förderbeiträge für Solaranlagen?</summary>
+        <div class="answer">
+          <p>Ja. Der Bund unterstützt Photovoltaikanlagen mit der Einmalvergütung, die über Pronovo abgewickelt wird. Je nach Kanton und Gemeinde kommen weitere Beiträge dazu, teils auch für Batteriespeicher.</p>
+          <p>Welche Beiträge für Ihr Projekt gelten und wie hoch sie sind, klärt der Fachbetrieb mit Ihnen im Rahmen der Offerte.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Was passiert mit meinen Daten?</summary>
+        <div class="answer">
+          <p>Wir nutzen Ihre Angaben ausschliesslich dafür, den passenden Fachbetrieb für Ihr Vorhaben zu finden, und geben sie nur an diesen einen Betrieb weiter. Wir verkaufen keine Daten und geben sie nicht für fremde Werbung heraus.</p>
+          <p>Sie können jederzeit verlangen, dass wir Ihre Daten löschen. Die Einzelheiten stehen in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABSCHLUSS ============ -->
+<section>
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Zwei Minuten, und wir kümmern uns um den Rest.</h2>
+        <p class="lead">Beantworten Sie vier kurze Fragen. Wir finden den Betrieb, der zu Ihrem Haus passt.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="#anfrage">Anfrage starten</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Solar Connect, zur Startseite">
+          <img src="assets/icon.svg" alt="" width="28" height="28">
+          <span><span class="b-solar">Solar</span> <span class="b-connect">Connect</span></span>
+        </a>
+        <p>Wir verbinden Hauseigentümerinnen und Hauseigentümer in der Deutschschweiz mit dem Solarbetrieb, der zu ihrem Projekt passt. Kostenlos und unverbindlich.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Entdecken</h4>
+        <ul>
+          <li><a href="#ablauf">So funktioniert es</a></li>
+          <li><a href="#pruefen">Was wir prüfen</a></li>
+          <li><a href="#fragen">Häufige Fragen</a></li>
+          <li><a href="#anfrage">Anfrage starten</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt und Rechtliches</h4>
+        <ul>
+          <li><span class="ph">[[PLATZHALTER: Kontaktadresse, z.B. hallo@ Domain]]</span></li>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Solar Connect. Alle Rechte vorbehalten.</span>
+      <div class="footer-badges">
+        <span>Kostenlos</span>
+        <span>Unverbindlich</span>
+        <span>Deutschschweiz</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile-Navigation
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Schliessen' : 'Menü';
+  });
+
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName !== 'A') return;
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'Menü';
+  });
+})();
+
+// Anfrage in vier Schritten
+(function () {
+  var form = document.getElementById('quiz');
+  if (!form) return;
+
+  var steps = form.querySelectorAll('.q-step');
+  var count = document.getElementById('qCount');
+  var bar = document.getElementById('qBar');
+  var back = document.getElementById('qBack');
+  var error = document.getElementById('qError');
+  var submit = document.getElementById('qSubmit');
+  var verlauf = ['1'];
+
+  function zeigen(name) {
+    steps.forEach(function (s) { s.classList.toggle('active', s.dataset.step === name); });
+    var nr = parseInt(name, 10);
+    if (nr) {
+      count.textContent = 'Frage ' + nr + ' von 4';
+      bar.style.width = (nr * 25) + '%';
+    } else {
+      count.textContent = name === 'danke' ? 'Erledigt' : '';
+      bar.style.width = name === 'danke' ? '100%' : '25%';
+    }
+    back.hidden = verlauf.length < 2 || name === 'danke';
+    error.textContent = '';
+  }
+
+  function weiter(name) {
+    verlauf.push(name);
+    zeigen(name);
+  }
+
+  back.addEventListener('click', function () {
+    if (verlauf.length < 2) return;
+    verlauf.pop();
+    zeigen(verlauf[verlauf.length - 1]);
+  });
+
+  // Einfachauswahl springt beim Klick direkt weiter
+  form.addEventListener('change', function (e) {
+    var t = e.target;
+    if (!t.hasAttribute('data-auto')) return;
+    var step = t.closest('.q-step').dataset.step;
+    setTimeout(function () {
+      if (step === '1') weiter(t.value === 'Ja' ? '2' : 'nein');
+      else if (step === '3') weiter('4');
+    }, 180);
+  });
+
+  form.querySelector('[data-next]').addEventListener('click', function () { weiter('3'); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.firma.value) return; // Honeypot, Bots fuellen jedes Feld
+
+    var fehlt = ['name', 'plz', 'telefon', 'email'].filter(function (f) { return !form[f].checkValidity(); });
+    if (fehlt.length) {
+      error.textContent = fehlt.indexOf('plz') > -1 && fehlt.length === 1
+        ? 'Bitte geben Sie eine vierstellige Postleitzahl ein.'
+        : 'Bitte füllen Sie alle Felder aus.';
+      form[fehlt[0]].focus();
+      return;
+    }
+    if (!form.einwilligung.checked) {
+      error.textContent = 'Bitte bestätigen Sie die Einwilligung, damit wir Ihre Anfrage weitergeben dürfen.';
+      return;
+    }
+
+    var endpoint = form.dataset.endpoint || '';
+    if (endpoint.indexOf('https://') !== 0) {
+      error.textContent = 'Das Formular ist noch nicht verbunden. Bitte versuchen Sie es später noch einmal.';
+      return;
+    }
+
+    // Als Formulardaten statt JSON, damit der Browser keinen Preflight schickt.
+    // Webhooks wie Zapier Catch Hook nehmen das so direkt an.
+    var daten = new URLSearchParams();
+    daten.append('eigentuemer', (form.querySelector('[name=eigentuemer]:checked') || {}).value || '');
+    daten.append('verbraucher', Array.prototype.map.call(form.querySelectorAll('[name=verbraucher]:checked'), function (c) { return c.value; }).join(', '));
+    daten.append('zeitpunkt', (form.querySelector('[name=zeitpunkt]:checked') || {}).value || '');
+    ['name', 'plz', 'telefon', 'email'].forEach(function (f) { daten.append(f, form[f].value.trim()); });
+    daten.append('quelle', 'Website');
+    daten.append('seite', location.href);
+
+    submit.disabled = true;
+    submit.textContent = 'Wird gesendet';
+
+    fetch(endpoint, { method: 'POST', body: daten })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        weiter('danke');
+      })
+      .catch(function () {
+        error.textContent = 'Das hat nicht geklappt. Bitte versuchen Sie es in einem Moment noch einmal.';
+      })
+      .then(function () {
+        submit.disabled = false;
+        submit.textContent = 'Anfrage absenden';
+      });
+  });
+
+  zeigen('1');
+})();
+</script>
+
+</body>
+</html>

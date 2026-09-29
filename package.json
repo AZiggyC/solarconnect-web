@@ -1,0 +1,10 @@
+{
+  "name": "solarconnect-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Solar Connect, Aussenauftritt fuer Hauseigentuemer mit Interesse an einer Solaranlage. Statisches HTML, kein Build-Schritt.",
+  "scripts": {
+    "dev": "npx --yes serve@14 -l 4175 .",
+    "check": "node scripts/check.mjs"
+  }
+}
