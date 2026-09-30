@@ -58,8 +58,8 @@ Platzhalter sind im Browser gelb gestrichelt markiert.
 
 ## Marke
 
-Nach dem Brand Guide 1.0 vom September 2026 (`solarconnect_Brand-Guide.pdf`, im Vault
-unter `07 Anhänge/`). Schreibweise immer **solarconnect**, klein und zusammen.
+Nach dem Brand Guide 1.1 vom 30.09.2026 (`Artifacts/solarconnect-brand.html` im Vault).
+Version 1.0 liegt als PDF unter `07 Anhänge/`. Schreibweise immer **solarconnect**, klein und zusammen.
 
 | Rolle | Hex | Einsatz |
 |---|---|---|
