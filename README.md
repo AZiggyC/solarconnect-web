@@ -63,11 +63,13 @@ unter `07 Anhänge/`). Schreibweise immer **solarconnect**, klein und zusammen.
 
 | Rolle | Hex | Einsatz |
 |---|---|---|
-| Solar-Rot | `#B94336` | Logo, CTA-Button, Eyebrow, Icons. Sparsam. |
-| Anthrazit | `#1A1A1A` | Headlines, «connect» auf Hell, dunkle Flächen |
+| Rot | `#DA291C` | Logo, CTA-Button, Eyebrow, Icons. Sparsam. |
+| Dunkel | `#111418` | Headlines, «connect» auf Hell, dunkle Flächen |
 | Grau | `#555555` | Fliesstext, Hinweise |
 | Amber | `#F0D3A8` | nur Deko: Punktmuster |
 | Weiss | `#FFFFFF` | Flächen |
+
+**Abweichung vom Guide (Luis, 30.09.2026):** Rot ist `#DA291C` statt `#B94336`, Dunkel `#111418` statt `#1A1A1A`. Die Website gilt, das PDF ist in diesem Punkt veraltet.
 
 Richtwert Farbverteilung: Weiss 55, Anthrazit 25, Rot 10, Grau 6, Amber 4 Prozent.
 
@@ -75,8 +77,8 @@ Schrift: Poppins, Bold für Headlines, Regular für Text. Buttons Radius 14 px, 
 Nummerierte Schritte als rote Kreise mit weisser Zahl, Vorteile mit Häkchen im Kreis (max. 3),
 Punktmuster in Amber nur in einer leeren Ecke.
 
-Zwei Ableitungen, die nicht im Guide stehen: `--brand-light` `#E0705F` für rote Schrift auf
-Anthrazit (das Original-Rot ist dort zu schwach für kleine Schrift) und ein Hellbeige
+Zwei Ableitungen, die nicht im Guide stehen: `--brand-light` `#FF4C3B` für rote Schrift auf
+Dunkel (das Hauptrot ist dort zu schwach für kleine Schrift), Hover `#A31B12` und ein Hellbeige
 `#F7F4EF` für graue Abschnitte, wie die Kartenflächen im Guide.
 
 Logo: Bildmarke in `assets/icon.svg` (auch Favicon), Wortmarke als HTML in `.brand`
