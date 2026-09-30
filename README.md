@@ -1,10 +1,10 @@
-# Solar Connect
+# solarconnect
 
-Aussenauftritt von Solar Connect für Hauseigentümer, die eine Solaranlage planen.
+Aussenauftritt von solarconnect für Hauseigentümer, die eine Solaranlage planen.
 Statisches HTML, kein Build-Schritt, kein Framework. Grundgerüst übernommen von
 `~/Websites/swissprima`.
 
-Das Prinzip: Solar Connect schaltet Anzeigen für Interessenten an Solaranlagen und
+Das Prinzip: solarconnect schaltet Anzeigen für Interessenten an Solaranlagen und
 verteilt die Anfragen an Fachbetriebe. Die Seite sagt dem Interessenten: Wir prüfen,
 welcher Betrieb für dich am besten passt, und stellen den Kontakt her.
 
@@ -58,14 +58,36 @@ Platzhalter sind im Browser gelb gestrichelt markiert.
 
 ## Marke
 
-**Vorläufig.** Farben und Wortmarke sind ein Platzhalter-Design, bis die
-Markenbasis von Luis da ist. Getauscht wird nur im Block `:root` in
-`assets/style.css`, der Rest liest diese Variablen. Die Wortmarke steht als HTML
-im Header und Footer (`.brand`), das Icon in `assets/icon.svg`.
+Nach dem Brand Guide 1.0 vom September 2026 (`solarconnect_Brand-Guide.pdf`, im Vault
+unter `07 Anhänge/`). Schreibweise immer **solarconnect**, klein und zusammen.
+
+| Rolle | Hex | Einsatz |
+|---|---|---|
+| Solar-Rot | `#B94336` | Logo, CTA-Button, Eyebrow, Icons. Sparsam. |
+| Anthrazit | `#1A1A1A` | Headlines, «connect» auf Hell, dunkle Flächen |
+| Grau | `#555555` | Fliesstext, Hinweise |
+| Amber | `#F0D3A8` | nur Deko: Punktmuster |
+| Weiss | `#FFFFFF` | Flächen |
+
+Richtwert Farbverteilung: Weiss 55, Anthrazit 25, Rot 10, Grau 6, Amber 4 Prozent.
+
+Schrift: Poppins, Bold für Headlines, Regular für Text. Buttons Radius 14 px, Bold, weiss auf Rot.
+Nummerierte Schritte als rote Kreise mit weisser Zahl, Vorteile mit Häkchen im Kreis (max. 3),
+Punktmuster in Amber nur in einer leeren Ecke.
+
+Zwei Ableitungen, die nicht im Guide stehen: `--brand-light` `#E0705F` für rote Schrift auf
+Anthrazit (das Original-Rot ist dort zu schwach für kleine Schrift) und ein Hellbeige
+`#F7F4EF` für graue Abschnitte, wie die Kartenflächen im Guide.
+
+Logo: Bildmarke in `assets/icon.svg` (auch Favicon), Wortmarke als HTML in `.brand`
+(«solar» rot, «connect» anthrazit, auf Dunkel weiss). Laut Guide verboten: Farben der
+Wortmarke ändern, andere Schrift, Partner-Firmennamen dazustellen.
+
+**Nicht übernommen:** Die Trust-Zeile aus dem Guide («4.9 Google-Bewertung · 30+ Installationen»)
+ist ein Gestaltungsbeispiel und keine belegte Zahl. Kommt erst auf die Seite, wenn es echte Werte gibt.
 
 ## Offene Punkte
 
-- Markenbasis einarbeiten (Farben, Logo, Schriften).
 - Domain festlegen, danach `canonical`, `og:url`, `sitemap.xml` und `robots.txt` ergänzen.
 - Kontaktadresse einrichten und an vier Stellen eintragen.
 - Webhook-URL für das Formular eintragen (Zapier baut Luis).

@@ -1,27 +1,30 @@
-/* Solar Connect – Grundgeruest nach der swissprima-Seite.
-   Farben sind VORLAEUFIG, bis die Markenbasis da ist. Getauscht wird nur im
-   Block :root, der Rest der Datei liest ausschliesslich diese Variablen. */
+/* solarconnect – Corporate Design nach Brand Guide 1.0, September 2026
+   (~/Downloads/solarconnect_Brand-Guide.pdf).
+   Rot ist Akzent (Logo, Buttons, Eyebrows, Icons) und wird sparsam eingesetzt.
+   Weiss und Anthrazit tragen die Flaechen. Richtwert: Weiss 55, Anthrazit 25,
+   Rot 10, Grau 6, Amber 4 Prozent. */
 
 :root{
-  --brand:#F29F05;        /* Hauptfarbe, Flaechen und Buttons */
-  --brand-dark:#D98C00;   /* Hover auf Buttons */
-  --brand-light:#FFC24D;  /* Akzent auf dunklem Grund */
-  --brand-text:#A86A00;   /* Akzent als Schrift auf Weiss, genug Kontrast */
-  --on-brand:#0F1E2E;     /* Schrift auf der Hauptfarbe */
-  --tint:#FEF3DC;
-  --ink:#0F1E2E;
-  --grey:#5F6B7A;
-  --surface:#F5F6F7;
-  --line:#E2E5E9;
+  --brand:#B94336;        /* Solar-Rot: Logo, CTA, Eyebrow, Icons */
+  --brand-dark:#9E3529;   /* Hover auf Buttons */
+  --brand-light:#E0705F;  /* Rot als Schrift auf Anthrazit, damit es lesbar bleibt */
+  --brand-text:#B94336;   /* Rot als Schrift auf Weiss */
+  --on-brand:#FFFFFF;
+  --amber:#F0D3A8;        /* nur Deko: Punktmuster, Verbindungslinien */
+  --tint:#F7F3ED;         /* Hellbeige, Flaeche hinter Icons und Auswahl */
+  --ink:#1A1A1A;          /* Anthrazit */
+  --grey:#555555;
+  --surface:#F7F4EF;
+  --line:#E8E3DC;
   --white:#FFFFFF;
 
-  --display:'Inter Tight','Inter',system-ui,-apple-system,sans-serif;
-  --body:'Inter',system-ui,-apple-system,sans-serif;
+  --display:'Poppins',system-ui,-apple-system,sans-serif;
+  --body:'Poppins',system-ui,-apple-system,sans-serif;
 
   --wrap:1180px;
   --pad:24px;
   --radius:14px;
-  --radius-sm:10px;
+  --radius-sm:12px;
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -37,8 +40,8 @@ body{
   background:var(--white);
   color:var(--ink);
   font-family:var(--body);
-  font-size:17px;
-  line-height:1.6;
+  font-size:16px;
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
@@ -52,17 +55,17 @@ a{color:inherit}
 /* ---------- Typografie ---------- */
 
 h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance}
-h1{font-weight:700;font-size:clamp(38px,6vw,68px);line-height:1.04;letter-spacing:-.033em}
-h2{font-weight:700;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-.025em}
-h3{font-weight:600;font-size:clamp(19px,1.6vw,22px);line-height:1.3;letter-spacing:-.015em}
-h4{font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+h1{font-weight:700;font-size:clamp(36px,5.6vw,62px);line-height:1.12;letter-spacing:-.025em}
+h2{font-weight:700;font-size:clamp(27px,3.4vw,40px);line-height:1.15;letter-spacing:-.02em}
+h3{font-weight:700;font-size:clamp(19px,1.6vw,22px);line-height:1.3;letter-spacing:-.015em}
+h4{font-weight:700;font-size:16px;line-height:1.35;letter-spacing:-.01em}
 p{margin:0}
 .lead{font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:var(--grey);max-width:58ch}
 .muted{color:var(--grey)}
 .accent{color:var(--brand-text)}
 
 .eyebrow{
-  font-size:13px;font-weight:600;letter-spacing:.09em;
+  font-size:13px;font-weight:700;letter-spacing:.08em;
   text-transform:uppercase;color:var(--brand-text);
   display:flex;align-items:center;gap:10px;
 }
@@ -73,7 +76,7 @@ p{margin:0}
 section{padding:clamp(64px,8vw,112px) 0}
 .sec-surface{background:var(--surface)}
 .sec-ink{background:var(--ink);color:var(--white)}
-.sec-ink .lead,.sec-ink .muted{color:#A3ADBA}
+.sec-ink .lead,.sec-ink .muted{color:#B5B5B5}
 .sec-ink .eyebrow{color:var(--brand-light)}
 .sec-ink .eyebrow::before{background:var(--brand-light)}
 
@@ -83,8 +86,8 @@ section{padding:clamp(64px,8vw,112px) 0}
 
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  font-family:var(--body);font-weight:600;font-size:16px;line-height:1;
-  padding:16px 26px;border-radius:9px;border:1.5px solid transparent;
+  font-family:var(--body);font-weight:700;font-size:16px;line-height:1;
+  padding:17px 28px;border-radius:14px;border:1.5px solid transparent;
   text-decoration:none;cursor:pointer;
   transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
 }
@@ -96,7 +99,7 @@ section{padding:clamp(64px,8vw,112px) 0}
 .sec-ink .btn-outline{color:#fff;border-color:rgba(255,255,255,.28)}
 .sec-ink .btn-outline:hover{border-color:#fff}
 .btn-sm{padding:12px 18px;font-size:15px}
-.btn-lg{padding:18px 32px;font-size:17px}
+.btn-lg{padding:20px 34px;font-size:17px}
 
 .btn-row{display:flex;flex-wrap:wrap;gap:12px}
 
@@ -119,14 +122,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 
 /* Wortmarke. Vorlaeufig als HTML, bis ein Logo aus der Markenbasis da ist. */
 .brand{
-  display:flex;align-items:center;gap:10px;text-decoration:none;flex:none;
-  font-family:var(--display);font-size:20px;letter-spacing:-.02em;color:var(--ink);
+  display:flex;align-items:center;gap:9px;text-decoration:none;flex:none;
+  font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.01em;line-height:1;
 }
-.brand img{width:28px;height:28px}
-.brand .b-solar{font-weight:700}
-.brand .b-connect{font-weight:500;color:var(--grey)}
-.site-footer .brand{color:#fff}
-.site-footer .brand .b-connect{color:#A3ADBA}
+.brand img{width:32px;height:32px}
+.brand .b-solar{color:var(--brand)}
+.brand .b-connect{color:var(--ink)}
+/* Farbig auf Dunkel: connect wird weiss, solar bleibt rot */
+.site-footer .brand .b-connect{color:#fff}
 
 .site-nav{display:flex;align-items:center;gap:30px}
 .site-nav a{
@@ -158,9 +161,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 
 .hero{
   padding:clamp(56px,7vw,104px) 0 clamp(48px,6vw,80px);
-  background:
-    radial-gradient(900px 420px at 88% -10%, var(--tint), transparent 70%);
+  position:relative;overflow:hidden;
 }
+/* Punktmuster in Amber, in der leeren Ecke oben rechts */
+.hero::before{
+  content:"";position:absolute;top:36px;right:24px;width:168px;height:84px;
+  background-image:radial-gradient(circle,var(--amber) 4px,transparent 4.5px);
+  background-size:28px 28px;pointer-events:none;
+}
+.hero-grid{position:relative}
+@media (max-width:900px){.hero::before{display:none}}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,5vw,72px);align-items:center}
 .hero h1{margin-bottom:22px;font-size:clamp(36px,4.6vw,58px)}
 .hero .lead{margin-bottom:32px}
@@ -168,7 +178,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 
 .hero-note{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--grey)}
 .hero-note span{display:flex;align-items:center;gap:7px}
-.hero-note svg{flex:none;color:var(--brand-text)}
+.hero-note{font-weight:600;color:var(--ink)}
+.hero-note svg{flex:none;color:var(--brand)}
 
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
@@ -179,11 +190,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 .panel{
   background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
   padding:clamp(22px,3vw,30px);
-  box-shadow:0 1px 2px rgba(15,30,46,.04),0 12px 32px -12px rgba(15,30,46,.16);
+  box-shadow:0 1px 2px rgba(26,26,26,.04),0 14px 36px -14px rgba(26,26,26,.18);
 }
 
 .q-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
-.q-count{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+.q-count{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-text)}
 .q-back{
   background:none;border:0;padding:4px 0;font:inherit;font-size:14px;font-weight:600;
   color:var(--grey);cursor:pointer;
@@ -214,7 +225,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
   display:flex;align-items:center;justify-content:center;color:transparent;background:var(--white);
 }
 .option input[type=radio] + .tick{border-radius:50%}
-.option:has(input:checked){border-color:var(--brand);background:var(--tint)}
+.option:has(input:checked){border-color:var(--brand);background:#FBF3F1}
 .option:has(input:checked) .tick{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
 
 .fields{display:grid;gap:14px}
@@ -292,9 +303,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
   background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
   padding:28px;display:flex;flex-direction:column;gap:10px;
 }
-.card p{font-size:15px;color:var(--grey);line-height:1.6}
+.card p{font-size:15px;color:var(--grey);line-height:1.65}
 .card-icon{
-  width:42px;height:42px;border-radius:11px;background:var(--tint);color:var(--brand-text);
+  width:46px;height:46px;border-radius:12px;background:var(--tint);color:var(--brand);
   display:flex;align-items:center;justify-content:center;margin-bottom:6px;flex:none;
 }
 
@@ -304,15 +315,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 .step{padding:32px 28px 0 0;border-right:1px solid rgba(255,255,255,.16)}
 .step:not(:first-child){padding-left:28px}
 .step:last-child{border-right:0}
+/* Nummerierte Schritte: rote Kreise mit weisser Zahl */
 .step-num{
-  font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.04em;
-  color:var(--brand-light);margin-bottom:16px;
+  font-family:var(--display);font-weight:700;font-size:18px;line-height:1;
+  width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
 }
 .step h3{margin-bottom:8px;color:#fff}
-.step p{font-size:15px;color:#A3ADBA;line-height:1.6}
+.step p{font-size:15px;color:#B5B5B5;line-height:1.65}
 .step-time{
   display:inline-block;margin-top:14px;font-size:13px;font-weight:600;
-  letter-spacing:.05em;text-transform:uppercase;color:#728096;
+  letter-spacing:.06em;text-transform:uppercase;color:#8A8A8A;
 }
 @media (max-width:980px){
   .steps{grid-template-columns:repeat(2,1fr)}
@@ -377,14 +390,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
   background:var(--ink);color:#fff;border-radius:calc(var(--radius) + 6px);
   padding:clamp(36px,5vw,64px);
   display:grid;grid-template-columns:1.4fr auto;gap:32px;align-items:center;
-  background-image:radial-gradient(600px 300px at 100% 0%, rgba(242,159,5,.22), transparent 70%);
+  position:relative;overflow:hidden;
 }
-.cta-box .lead{color:#A3ADBA;margin-top:14px}
+.cta-box > *{position:relative}
+.cta-box::before{
+  content:"";position:absolute;right:24px;bottom:18px;width:196px;height:84px;
+  background-image:radial-gradient(circle,var(--amber) 3.5px,transparent 4px);
+  background-size:28px 28px;opacity:.9;pointer-events:none;
+}
+.cta-box .lead{color:#B5B5B5;margin-top:14px}
 @media (max-width:800px){.cta-box{grid-template-columns:1fr}}
 
 /* ---------- Footer ---------- */
 
-.site-footer{background:var(--ink);color:#A3ADBA;padding:clamp(56px,7vw,84px) 0 36px;font-size:15px}
+.site-footer{background:var(--ink);color:#B5B5B5;padding:clamp(56px,7vw,84px) 0 36px;font-size:15px}
 .footer-top{
   display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;
   padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.14);
@@ -396,12 +415,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 .footer-brand p{max-width:38ch;line-height:1.6;font-size:15px}
 .footer-col h4{color:#fff;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
 .footer-col ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}
-.footer-col a{text-decoration:none;color:#A3ADBA;transition:color .18s ease}
+.footer-col a{text-decoration:none;color:#B5B5B5;transition:color .18s ease}
 .footer-col a:hover{color:#fff}
 
 .footer-bottom{
   padding-top:28px;display:flex;flex-wrap:wrap;gap:14px 28px;
-  align-items:center;justify-content:space-between;font-size:14px;color:#728096;
+  align-items:center;justify-content:space-between;font-size:14px;color:#8A8A8A;
 }
 .footer-badges{display:flex;flex-wrap:wrap;gap:8px}
 .footer-badges span{
