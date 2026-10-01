@@ -11,7 +11,7 @@ welcher Betrieb für dich am besten passt, und stellen den Kontakt her.
 ## Aufbau
 
 ```
-index.html            Startseite mit Anfrageformular in vier Schritten
+index.html            Startseite, alle CTAs führen in den Funnel
 datenschutz/          Datenschutzerklärung
 impressum/            Impressum
 assets/               Stylesheet, Icon
@@ -26,25 +26,15 @@ npm run dev
 
 Läuft danach auf http://localhost:4175
 
-## Anfrageformular
+## Solar-Check
 
-Die Fragen sind dieselben wie im SolarHai-Referenzformular `998763076243603`
-(siehe Vault, `Instant Formular schlaegt den Funnel bei Leadgen.md`), damit
-Website-Anfragen und Meta-Formular-Leads dieselben Felder tragen:
+Die Website hat kein eigenes Formular. Jeder Button «Solar-Check starten» führt in den
+Perspective-Funnel unter https://check.solar-connect.ch/anfrage/ (Domain im
+Perspective-Workspace, Stand 01.10.2026). Dort laufen Fragen, Kontaktdaten,
+Automails und Meta-Pixel.
 
-1. Eigentümer der Immobilie? Ja / Nein. Bei Nein endet das Formular freundlich.
-2. Stromverbraucher, Mehrfachauswahl
-3. Zeitpunkt der Umsetzung
-4. Name, PLZ, Telefon, E-Mail, Einwilligung zur Weitergabe an einen Betrieb
-
-Abgeschickt wird per `POST` an die URL in `data-endpoint` am `<form id="quiz">`,
-als Formulardaten (kein JSON, damit der Browser keinen Preflight schickt).
-Gedacht für einen Zapier Catch Hook. Felder:
-
-`eigentuemer`, `verbraucher`, `zeitpunkt`, `name`, `plz`, `telefon`, `email`,
-`quelle` (immer `Website`), `seite`.
-
-Ein verstecktes Feld `firma` fängt Bots ab. Ist es gefüllt, geht nichts raus.
+Der Funnel antwortet auf Skriptanfragen mit 403 (Cloudflare), wie bei swissprima.
+Ob der Link lebt, lässt sich deshalb nur im Browser prüfen.
 
 ## Vor dem Livegang
 
@@ -92,7 +82,6 @@ ist ein Gestaltungsbeispiel und keine belegte Zahl. Kommt erst auf die Seite, we
 
 - Domain festlegen, danach `canonical`, `og:url`, `sitemap.xml` und `robots.txt` ergänzen.
 - Kontaktadresse einrichten und an vier Stellen eintragen.
-- Webhook-URL für das Formular eintragen (Zapier baut Luis).
-- Datenschutz: Dienstleister, Hosting und Aufbewahrungsdauer eintragen.
+- Datenschutz: Hosting-Anbieter eintragen.
 - Bestätigen, dass jede Anfrage an genau einen Betrieb geht. Seite, FAQ und
   Datenschutz versprechen das so.

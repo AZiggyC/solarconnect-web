@@ -203,11 +203,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
   .hero-scene{position:relative;margin-top:-40px;height:150px}
 }
 
-/* ---------- Anfrage-Formular ---------- */
+/* ---------- Solar-Check-Karte im Hero ---------- */
 
 .panel{
   position:relative;background:var(--white);color:var(--ink);
-  border-radius:var(--radius-lg);padding:clamp(22px,3vw,32px);
+  border-radius:var(--radius-lg);padding:clamp(24px,3vw,34px);
   box-shadow:0 30px 80px -30px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06);
 }
 .panel-badge{
@@ -215,77 +215,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
   font-size:12px;font-weight:700;letter-spacing:.04em;border-radius:999px;padding:6px 14px;
   box-shadow:0 8px 20px -8px rgba(218,41,28,.8);
 }
-
-.q-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
-.q-count{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-text)}
-.q-back{background:none;border:0;padding:4px 0;font:inherit;font-size:14px;font-weight:600;color:var(--grey);cursor:pointer}
-.q-back:hover{color:var(--ink)}
-.q-back[hidden]{display:none}
-
-.q-bar{height:5px;background:var(--surface);border-radius:999px;overflow:hidden;margin-bottom:26px}
-.q-bar span{display:block;height:100%;width:25%;background:linear-gradient(90deg,var(--brand),#FF6A55);border-radius:inherit;transition:width .35s var(--ease)}
-
-.q-step{display:none}
-.q-step.active{display:block;animation:stepIn .35s var(--ease)}
-@keyframes stepIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
-.q-step h2{font-size:clamp(21px,2vw,25px);letter-spacing:-.02em;line-height:1.25;margin-bottom:6px}
-.q-step .q-sub{font-size:14.5px;color:var(--grey);margin-bottom:20px}
-
-.options{display:grid;gap:10px}
-.options.two{grid-template-columns:1fr 1fr}
-.option{
-  position:relative;display:flex;align-items:center;gap:12px;
-  border:1.5px solid var(--line);border-radius:12px;
-  padding:15px 16px;cursor:pointer;font-weight:600;font-size:15.5px;line-height:1.3;
-  background:var(--white);transition:border-color .15s ease,background-color .15s ease,transform .15s ease;
+.q-count{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-text);margin-bottom:10px}
+.check-card h2{font-size:clamp(22px,2.2vw,27px);letter-spacing:-.02em;line-height:1.2;margin-bottom:20px}
+.check-list{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+.check-list li{
+  display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:12px;
+  padding:12px 14px;font-weight:600;font-size:15px;line-height:1.35;
 }
-.option:hover{border-color:#BDB6AC;transform:translateY(-1px)}
-.option input{position:absolute;opacity:0;pointer-events:none}
-.option .tick{
-  flex:none;width:20px;height:20px;border:1.5px solid #CFC8BE;border-radius:6px;
-  display:flex;align-items:center;justify-content:center;color:transparent;background:var(--white);
-  transition:all .15s ease;
+.check-list span{
+  flex:none;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
 }
-.option input[type=radio] + .tick{border-radius:50%}
-.option:has(input:checked){border-color:var(--brand);background:#FDF0EE}
-.option:has(input:checked) .tick{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:inset 0 0 0 3px #fff}
-.option:has(input[type=checkbox]:checked) .tick{box-shadow:none}
-
-.fields{display:grid;gap:14px}
-.field{display:grid;gap:7px}
-.field label{font-size:13.5px;font-weight:600;color:var(--ink)}
-.field input{
-  font:inherit;font-size:16px;color:var(--ink);
-  background:var(--surface);border:1.5px solid var(--line);border-radius:12px;
-  padding:13px 15px;width:100%;transition:border-color .15s ease,background-color .15s ease;
-}
-.field input:hover{border-color:#CFC8BE}
-.field input:focus{outline:none;border-color:var(--brand);background:var(--white)}
-.fields-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:480px){
-  .fields-2{grid-template-columns:1fr}
-  .options.two{grid-template-columns:1fr}
-}
-
-.consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--grey);line-height:1.5;margin-top:2px;cursor:pointer}
-.consent input{margin-top:2px;width:18px;height:18px;accent-color:var(--brand);flex:none}
-.consent a{color:var(--ink)}
-
-.q-actions{margin-top:22px}
-.q-actions .btn{width:100%}
-.q-error{margin-top:12px;font-size:14px;color:#B42318}
-.q-error:empty{display:none}
+.check-card .btn{width:100%}
 .q-foot{font-size:13px;color:var(--grey);margin-top:14px;line-height:1.5;text-align:center}
-
-.q-done .done-icon{
-  width:56px;height:56px;border-radius:50%;background:var(--brand);color:#fff;
-  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-  box-shadow:0 12px 28px -10px rgba(218,41,28,.7);
-}
-.q-done p{color:var(--grey);font-size:15.5px}
-.q-done p + p{margin-top:10px}
-
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 /* ---------- Trust-Band ---------- */
 

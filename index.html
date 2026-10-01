@@ -39,7 +39,7 @@
     </nav>
 
     <div class="header-cta">
-      <a class="btn btn-primary btn-sm" href="#anfrage">Solar-Check starten</a>
+      <a class="btn btn-primary btn-sm" href="https://check.solar-connect.ch/anfrage/">Solar-Check starten</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menü</button>
     </div>
   </div>
@@ -56,7 +56,7 @@
       <p class="lead">Sie sagen uns in zwei Minuten, was Sie vorhaben. Wir prüfen, welcher Fachbetrieb aus Ihrer Region am besten zu Ihrem Haus und Ihrem Zeitplan passt, und stellen den Kontakt her.</p>
 
       <div class="btn-row">
-        <a class="btn btn-primary btn-lg" href="#anfrage">
+        <a class="btn btn-primary btn-lg" href="https://check.solar-connect.ch/anfrage/">
           Solar-Check starten
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9.5 4.5L14 9l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -70,120 +70,23 @@
       </div>
     </div>
 
-    <!-- Anfrage. Gleiche Fragen wie das SolarHai-Referenzformular 998763076243603,
-         damit Website-Anfragen und Meta-Formular-Leads dieselben Felder tragen. -->
-    <aside class="panel" id="anfrage">
+    <!-- Solar-Check. Der Funnel laeuft in Perspective unter check.solar-connect.ch,
+         die Website schickt nur dorthin. -->
+    <aside class="panel check-card" id="anfrage">
       <span class="panel-badge">Kostenlos · 2 Minuten</span>
-      <form id="quiz" novalidate
-            data-endpoint="[[PLATZHALTER: Webhook-URL fuer Anfragen eintragen, z.B. Zapier Catch Hook]]">
-
-        <div class="q-head">
-          <span class="q-count" id="qCount">Frage 1 von 4</span>
-          <button type="button" class="q-back" id="qBack" hidden>Zurück</button>
-        </div>
-        <div class="q-bar" aria-hidden="true"><span id="qBar"></span></div>
-
-        <!-- Schritt 1 -->
-        <fieldset class="q-step active" data-step="1" style="border:0;margin:0;padding:0">
-          <legend class="hp">Frage 1</legend>
-          <h2>Sind Sie Eigentümer der Immobilie?</h2>
-          <p class="q-sub">Über eine Solaranlage entscheidet, wem das Dach gehört.</p>
-          <div class="options two">
-            <label class="option"><input type="radio" name="eigentuemer" value="Ja" data-auto><span class="tick"></span>Ja</label>
-            <label class="option"><input type="radio" name="eigentuemer" value="Nein" data-auto><span class="tick"></span>Nein</label>
-          </div>
-        </fieldset>
-
-        <!-- Nicht Eigentümer -->
-        <div class="q-step" data-step="nein">
-          <h2>Dann sind wir leider nicht die Richtigen.</h2>
-          <p class="q-sub" style="margin-bottom:0">Unsere Partnerbetriebe planen Anlagen mit den Eigentümerinnen und Eigentümern. Wenn Sie zur Miete wohnen und sich eine Solaranlage wünschen, geben Sie diese Seite gern an Ihre Vermieterschaft weiter.</p>
-        </div>
-
-        <!-- Schritt 2 -->
-        <fieldset class="q-step" data-step="2" style="border:0;margin:0;padding:0">
-          <legend class="hp">Frage 2</legend>
-          <h2>Welche Stromverbraucher nutzen Sie heute oder planen Sie?</h2>
-          <p class="q-sub">Mehrfachauswahl möglich. Das bestimmt, wie gross die Anlage sein sollte.</p>
-          <div class="options two">
-            <label class="option"><input type="checkbox" name="verbraucher" value="Elektroauto"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Elektroauto</label>
-            <label class="option"><input type="checkbox" name="verbraucher" value="Wärmepumpe"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wärmepumpe</label>
-            <label class="option"><input type="checkbox" name="verbraucher" value="Pool"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pool</label>
-            <label class="option"><input type="checkbox" name="verbraucher" value="Klimaanlage"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Klimaanlage</label>
-            <label class="option"><input type="checkbox" name="verbraucher" value="Batteriespeicher"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Batteriespeicher</label>
-            <label class="option"><input type="checkbox" name="verbraucher" value="Andere"><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Andere oder keine</label>
-          </div>
-          <div class="q-actions">
-            <button type="button" class="btn btn-primary btn-lg" data-next>Weiter</button>
-          </div>
-        </fieldset>
-
-        <!-- Schritt 3 -->
-        <fieldset class="q-step" data-step="3" style="border:0;margin:0;padding:0">
-          <legend class="hp">Frage 3</legend>
-          <h2>Wann möchten Sie die Solaranlage umsetzen?</h2>
-          <p class="q-sub">So finden wir einen Betrieb, der in Ihrem Zeitraum auch Kapazität hat.</p>
-          <div class="options">
-            <label class="option"><input type="radio" name="zeitpunkt" value="So schnell wie möglich" data-auto><span class="tick"></span>So schnell wie möglich</label>
-            <label class="option"><input type="radio" name="zeitpunkt" value="In den nächsten 3 bis 6 Monaten" data-auto><span class="tick"></span>In den nächsten 3 bis 6 Monaten</label>
-            <label class="option"><input type="radio" name="zeitpunkt" value="Später" data-auto><span class="tick"></span>Später</label>
-          </div>
-        </fieldset>
-
-        <!-- Schritt 4 -->
-        <fieldset class="q-step" data-step="4" style="border:0;margin:0;padding:0">
-          <legend class="hp">Frage 4</legend>
-          <h2>Fast geschafft. Wie erreichen wir Sie?</h2>
-          <p class="q-sub">Wir brauchen Ihre Postleitzahl, um den passenden Betrieb in Ihrer Nähe zu finden.</p>
-
-          <div class="fields">
-            <div class="field">
-              <label for="name">Vor- und Nachname</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="fields-2">
-              <div class="field">
-                <label for="plz">Postleitzahl</label>
-                <input id="plz" name="plz" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{4}" maxlength="4" required>
-              </div>
-              <div class="field">
-                <label for="telefon">Telefon</label>
-                <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
-              </div>
-            </div>
-            <div class="field">
-              <label for="email">E-Mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-
-            <label class="consent">
-              <input type="checkbox" name="einwilligung" value="ja" required>
-              <span>Ich bin einverstanden, dass solarconnect meine Angaben prüft und an einen passenden Fachbetrieb aus meiner Region weitergibt, der mich zu meinem Vorhaben kontaktiert. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
-            </label>
-
-            <div class="hp" aria-hidden="true">
-              <label for="firma">Firma</label>
-              <input id="firma" name="firma" type="text" tabindex="-1" autocomplete="off">
-            </div>
-          </div>
-
-          <div class="q-actions">
-            <button type="submit" class="btn btn-primary btn-lg" id="qSubmit">Anfrage absenden</button>
-            <p class="q-error" id="qError" role="alert"></p>
-            <p class="q-foot">Kostenlos und unverbindlich. Sie gehen keine Verpflichtung ein.</p>
-          </div>
-        </fieldset>
-
-        <!-- Danke -->
-        <div class="q-step q-done" data-step="danke">
-          <div class="done-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h2>Danke, Ihre Anfrage ist bei uns.</h2>
-          <p>Wir prüfen jetzt, welcher Fachbetrieb aus Ihrer Region zu Ihrem Vorhaben passt. Der Betrieb meldet sich danach direkt bei Ihnen, per Telefon oder E-Mail.</p>
-          <p>Bis dahin müssen Sie nichts weiter tun.</p>
-        </div>
-      </form>
+      <p class="q-count">Solar-Check</p>
+      <h2>Vier kurze Fragen, ein passender Betrieb.</h2>
+      <ol class="check-list">
+        <li><span>1</span>Sind Sie Eigentümer der Immobilie?</li>
+        <li><span>2</span>Welche Stromverbraucher nutzen oder planen Sie?</li>
+        <li><span>3</span>Wann möchten Sie umsetzen?</li>
+        <li><span>4</span>Wie erreichen wir Sie?</li>
+      </ol>
+      <a class="btn btn-primary btn-lg" href="https://check.solar-connect.ch/anfrage/">
+        Solar-Check starten
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9.5 4.5L14 9l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="q-foot">Kostenlos und unverbindlich. Sie gehen keine Verpflichtung ein.</p>
     </aside>
   </div>
 
@@ -501,7 +404,7 @@
       <p class="eyebrow">Häufige Fragen</p>
       <h2>Das werden wir am häufigsten gefragt.</h2>
       <p class="lead">Ihre Frage ist nicht dabei? Starten Sie den Solar-Check. Der Betrieb beantwortet alle Details im Beratungsgespräch.</p>
-      <a class="btn btn-primary" href="#anfrage">Solar-Check starten</a>
+      <a class="btn btn-primary" href="https://check.solar-connect.ch/anfrage/">Solar-Check starten</a>
     </div>
 
     <div class="reveal">
@@ -569,7 +472,7 @@
         <h2>Ihr Dach kann mehr als Regen abhalten.</h2>
         <p class="lead">Vier kurze Fragen, zwei Minuten. Wir finden den Betrieb, der zu Ihrem Haus passt.</p>
       </div>
-      <a class="btn btn-primary btn-lg" href="#anfrage">
+      <a class="btn btn-primary btn-lg" href="https://check.solar-connect.ch/anfrage/">
         Solar-Check starten
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9.5 4.5L14 9l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -580,7 +483,7 @@
 </main>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="btn btn-primary btn-lg" href="#anfrage">Solar-Check starten</a>
+  <a class="btn btn-primary btn-lg" href="https://check.solar-connect.ch/anfrage/">Solar-Check starten</a>
 </div>
 
 <!-- ============ FOOTER ============ -->
@@ -682,110 +585,6 @@
   var setzen = function () { cta.classList.toggle('show', !heroSichtbar && !formSichtbar); };
   new IntersectionObserver(function (e) { heroSichtbar = e[0].isIntersecting; setzen(); }, { threshold: 0.05 }).observe(hero);
   new IntersectionObserver(function (e) { formSichtbar = e[0].isIntersecting; setzen(); }).observe(form);
-})();
-
-// Anfrage in vier Schritten
-(function () {
-  var form = document.getElementById('quiz');
-  if (!form) return;
-
-  var steps = form.querySelectorAll('.q-step');
-  var count = document.getElementById('qCount');
-  var bar = document.getElementById('qBar');
-  var back = document.getElementById('qBack');
-  var error = document.getElementById('qError');
-  var submit = document.getElementById('qSubmit');
-  var verlauf = ['1'];
-
-  function zeigen(name) {
-    steps.forEach(function (s) { s.classList.toggle('active', s.dataset.step === name); });
-    var nr = parseInt(name, 10);
-    if (nr) {
-      count.textContent = 'Frage ' + nr + ' von 4';
-      bar.style.width = (nr * 25) + '%';
-    } else {
-      count.textContent = name === 'danke' ? 'Erledigt' : '';
-      bar.style.width = name === 'danke' ? '100%' : '25%';
-    }
-    back.hidden = verlauf.length < 2 || name === 'danke';
-    error.textContent = '';
-  }
-
-  function weiter(name) {
-    verlauf.push(name);
-    zeigen(name);
-  }
-
-  back.addEventListener('click', function () {
-    if (verlauf.length < 2) return;
-    verlauf.pop();
-    zeigen(verlauf[verlauf.length - 1]);
-  });
-
-  // Einfachauswahl springt beim Klick direkt weiter
-  form.addEventListener('change', function (e) {
-    var t = e.target;
-    if (!t.hasAttribute('data-auto')) return;
-    var step = t.closest('.q-step').dataset.step;
-    setTimeout(function () {
-      if (step === '1') weiter(t.value === 'Ja' ? '2' : 'nein');
-      else if (step === '3') weiter('4');
-    }, 180);
-  });
-
-  form.querySelector('[data-next]').addEventListener('click', function () { weiter('3'); });
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (form.firma.value) return; // Honeypot, Bots fuellen jedes Feld
-
-    var fehlt = ['name', 'plz', 'telefon', 'email'].filter(function (f) { return !form[f].checkValidity(); });
-    if (fehlt.length) {
-      error.textContent = fehlt.indexOf('plz') > -1 && fehlt.length === 1
-        ? 'Bitte geben Sie eine vierstellige Postleitzahl ein.'
-        : 'Bitte füllen Sie alle Felder aus.';
-      form[fehlt[0]].focus();
-      return;
-    }
-    if (!form.einwilligung.checked) {
-      error.textContent = 'Bitte bestätigen Sie die Einwilligung, damit wir Ihre Anfrage weitergeben dürfen.';
-      return;
-    }
-
-    var endpoint = form.dataset.endpoint || '';
-    if (endpoint.indexOf('https://') !== 0) {
-      error.textContent = 'Das Formular ist noch nicht verbunden. Bitte versuchen Sie es später noch einmal.';
-      return;
-    }
-
-    // Als Formulardaten statt JSON, damit der Browser keinen Preflight schickt.
-    // Webhooks wie Zapier Catch Hook nehmen das so direkt an.
-    var daten = new URLSearchParams();
-    daten.append('eigentuemer', (form.querySelector('[name=eigentuemer]:checked') || {}).value || '');
-    daten.append('verbraucher', Array.prototype.map.call(form.querySelectorAll('[name=verbraucher]:checked'), function (c) { return c.value; }).join(', '));
-    daten.append('zeitpunkt', (form.querySelector('[name=zeitpunkt]:checked') || {}).value || '');
-    ['name', 'plz', 'telefon', 'email'].forEach(function (f) { daten.append(f, form[f].value.trim()); });
-    daten.append('quelle', 'Website');
-    daten.append('seite', location.href);
-
-    submit.disabled = true;
-    submit.textContent = 'Wird gesendet';
-
-    fetch(endpoint, { method: 'POST', body: daten })
-      .then(function (r) {
-        if (!r.ok) throw new Error(r.status);
-        weiter('danke');
-      })
-      .catch(function () {
-        error.textContent = 'Das hat nicht geklappt. Bitte versuchen Sie es in einem Moment noch einmal.';
-      })
-      .then(function () {
-        submit.disabled = false;
-        submit.textContent = 'Anfrage absenden';
-      });
-  });
-
-  zeigen('1');
 })();
 </script>
 
