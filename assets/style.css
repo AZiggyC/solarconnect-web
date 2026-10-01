@@ -121,7 +121,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 .brand .b-connect{color:var(--ink);transition:color .3s ease}
 
 .site-nav{display:flex;align-items:center;gap:32px}
-.site-nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--grey);transition:color .2s ease}
+.site-nav a{white-space:nowrap;text-decoration:none;font-size:15px;font-weight:500;color:var(--grey);transition:color .2s ease}
 .site-nav a:hover{color:var(--ink)}
 .header-cta{display:flex;align-items:center;gap:14px;flex:none}
 
@@ -137,7 +137,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,l
 .home .site-header:not(.scrolled) .site-nav a:hover{color:#fff}
 .home .site-header:not(.scrolled) .nav-toggle{color:#fff;border-color:rgba(255,255,255,.25)}
 
-@media (max-width:1000px){
+@media (max-width:1100px){
   .site-nav{display:none}
   .site-nav.open{
     display:flex;flex-direction:column;align-items:flex-start;gap:2px;
